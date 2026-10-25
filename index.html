@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="logo">📚 STUDY SPACE</div>
+        <h1>My Study Planner 💜</h1>
+        <p>Small steps, big dreams!</p>
+        <div id="date"></div>
+    </header>
+
+    <section class="card">
+        <h2>✨ Today's Focus</h2>
+        <p id="motivation">You've got this!</p>
+
+        <div class="progress-info">
+            <span>Your Progress</span>
+            <span id="progressText">0%</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+
+        <p id="taskCount">0 of 0 tasks completed</p>
+    </section>
+
+    <section class="card">
+        <h2>📝 My Tasks</h2>
+
+        <div class="input-area">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What will you study today?"
+                maxlength="100"
+            >
+            <button id="addBtn" onclick="addTask()">
+                + Add Task
+            </button>
+        </div>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all" onclick="setFilter('all')">All</button>
+            <button class="filter" data-filter="pending" onclick="setFilter('pending')">Pending</button>
+            <button class="filter" data-filter="completed" onclick="setFilter('completed')">Completed</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage">No tasks here yet 🌸</p>
+
+        <button class="clear-btn" onclick="clearCompleted()">
+            🧹 Clear Completed Tasks
+        </button>
+    </section>
+
+    <footer>
+        Made with 💜 | Keep learning, keep growing!
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
